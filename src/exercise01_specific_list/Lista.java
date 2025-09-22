@@ -48,6 +48,21 @@ public class Lista {
         }
     }
 
+    public static String insereNaPosicao(int indice, String elemento){
+        if(indice < 0 || indice > ultimo){
+            System.out.println("Posição invalida para inserir!");
+            return null;
+        }
+
+        for(int i = ultimo; i >= indice; i--){
+            lista[i + 1] = lista[i];
+
+        }
+        lista[indice] = elemento;
+        ultimo++;
+        return elemento;
+    }
+
     public static String pesquisaSimilar(String parte){
         for(int i = 0; i < ultimo; i++){
             if(lista[i].contains(parte)){
