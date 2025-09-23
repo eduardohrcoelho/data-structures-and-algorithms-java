@@ -63,6 +63,19 @@ public class Lista {
         return elemento;
     }
 
+    public static boolean retiraNaPosicao(int indice){
+        if(indice < 0 || indice > ultimo){
+            System.out.println("Posição invalida para inserir!");
+            return false;
+        }
+
+        for(int i = indice; i < ultimo; i++){
+            lista[i] = lista[i + 1];
+        }
+        ultimo--;
+        return true;
+    }
+
     public static int pesquisaPosicao(String elemento){
         for(int i = 0; i < ultimo; i++){
             if(lista[i].equalsIgnoreCase(elemento)){

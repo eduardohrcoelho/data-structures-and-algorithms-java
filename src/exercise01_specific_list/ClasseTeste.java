@@ -12,5 +12,8 @@ public class ClasseTeste {
         System.out.println(pesquisa);
         Lista.insereNaPosicao(0, "Uva");
         Lista.imprime();
+        System.out.println("-----------");
+        Lista.retiraNaPosicao(2);
+        Lista.imprime();
     }
 }
