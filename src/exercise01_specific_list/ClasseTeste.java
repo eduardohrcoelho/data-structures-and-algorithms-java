@@ -1,6 +1,6 @@
 package exercise01_specific_list;
 
-public class Program {
+public class ClasseTeste {
     public static void main(String[] args) {
         Lista.criaListaVazia(10);
         Lista.insere("Banana");
