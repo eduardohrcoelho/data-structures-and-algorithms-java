@@ -15,5 +15,11 @@ public class ClasseTeste {
         System.out.println("-----------");
         Lista.retiraNaPosicao(2);
         Lista.imprime();
+
+        String elemento = Lista.insereNaPosicao(2, "Limão");
+        if(elemento != null){
+            System.out.println(elemento + " inserido com sucesso!");
+        }
+        Lista.imprime();
     }
 }

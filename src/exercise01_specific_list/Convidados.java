@@ -29,8 +29,7 @@ public class Convidados {
 
                 case 'c':
                     System.out.println("Informe a posição do convidado que deseja retirar: ");
-                    int indice = scanner.nextInt();
-                    Lista.retiraNaPosicao(indice);
+                    Lista.retiraNaPosicao(scanner.nextInt());
                     break;
 
                 case 'd':
