@@ -10,11 +10,36 @@ public class FilaDeEspera {
         do{
             menu();
             op = scanner.nextInt();
+            scanner.nextLine();
+            switch(op){
+                case 1:
+                    System.out.print("Informe o nome do paciente para ser inserido na fila: ");
+                    Fila.enfileira(scanner.nextLine());
+                    break;
+
+                case 2:
+                    Object elemento = Fila.desenfileira();
+                    System.out.println("Chamando: " + elemento);
+                    break;
+
+                case 3:
+                    Fila.imprime();
+                    break;
+
+                case 4:
+                    System.out.println("Número de pacientes aguardando: ");
+                    break;
+
+                case 5:
+                    System.out.println("Encerrando programa.");
+                    break;
+
+                default:
+                    System.out.println("Opção invalida.");
+
+            }
         }while(op !=5);
-
-
-
-
+        
 
         scanner.close();
     }
