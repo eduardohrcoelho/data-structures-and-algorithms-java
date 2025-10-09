@@ -6,6 +6,9 @@ public class FilaDeEspera {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Informe o tamanho da fila: ");
+        Fila.criaFilaVazia(scanner.nextInt());
+        scanner.nextLine();
         int op;
         do{
             menu();
@@ -27,7 +30,7 @@ public class FilaDeEspera {
                     break;
 
                 case 4:
-                    System.out.println("Número de pacientes aguardando: ");
+                    System.out.println("Número de pacientes aguardando: " + Fila.tamanho());
                     break;
 
                 case 5:
@@ -39,7 +42,7 @@ public class FilaDeEspera {
 
             }
         }while(op !=5);
-        
+
 
         scanner.close();
     }

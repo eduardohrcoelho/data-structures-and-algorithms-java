@@ -52,4 +52,8 @@ public class Pilha {
         }
     }
 
+    public static Object numeroDeTarefas(){
+        return topo - 1;
+    }
+
 }

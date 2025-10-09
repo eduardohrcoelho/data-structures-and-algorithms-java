@@ -36,9 +36,16 @@ public class Fila {
     }
 
     public static void imprime(){
-        for(int i=frente; (i != tras);
-            i=(i+1)%fila.length)
+        for(int i=frente; (i != tras); i=(i+1)%fila.length)
             System.out.println(fila[i]);
+    }
+
+    public static int tamanho(){
+        int cont = 0;
+        for(int i=frente; (i != tras); i=(i+1)%fila.length){
+            cont++;
+        }
+        return cont;
     }
 
 }
