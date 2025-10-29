@@ -1,7 +1,6 @@
-package exercise02;
+package lista01.exercicio01;
 
-public class ListaUnificada {
-
+public class Lista {
     private static Object[] vetor;
     private static int ultimo;
 
@@ -102,18 +101,23 @@ public class ListaUnificada {
         return elemento;
     }
 
-    public static void sortSelection(int [] v, int n){
-        int posicao_menor, aux;
+    public static void sortSelection(Object [] v, int n){
+        int posicao_menor;
+        Object aux;
         for(int i = 0; i < n; i++){
             posicao_menor = i;
             for(int j = i + 1; j < n; j++){
-                if(v[j] < v[posicao_menor]){
+                if(((Integer) v[j]) < ((Integer)v[posicao_menor])){
                     posicao_menor = j;
                 }
             }
             aux = v[posicao_menor];
-            vetor[posicao_menor] = v[i];
+            v[posicao_menor] = v[i];
             v[i] = aux;
         }
+    }
+
+    public static void sortInsertion(Object [] v, int n){
+        
     }
 }
