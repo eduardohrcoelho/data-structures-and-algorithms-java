@@ -118,6 +118,33 @@ public class Lista {
     }
 
     public static void sortInsertion(Object [] v, int n){
-        
+        Object aux;
+        int j;
+        for(int i = 1; i < n; i++){
+            aux = v[i];
+            j = i - 1;
+            while(j >= 0 && ((Integer) v[j]) > ((Integer)aux)){
+                v[j+1] = v[j];
+                j--;
+            }
+            v[j + 1] = aux;
+        }
+    }
+
+    public static void insereOrdenado(Object elemento) {
+        if (estaCheia()) {
+            System.out.println("Erro: A estrutura está cheia.");
+            return;
+        }
+
+        int j = ultimo - 1;
+
+        while (j >= 0 && ((Comparable) vetor[j]).compareTo(elemento) > 0) {
+            vetor[j + 1] = vetor[j];
+            j--;
+        }
+
+        vetor[j + 1] = elemento;
+        ultimo++;
     }
 }
