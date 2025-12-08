@@ -52,6 +52,10 @@ public class Pilha {
         }
     }
 
+    public static int tamanho() {
+        return topo;
+    }
+
     public static Object numeroDeTarefas(){
         return topo - 1;
     }
