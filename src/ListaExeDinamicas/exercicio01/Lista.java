@@ -2,7 +2,6 @@ package ListaExeDinamicas.exercicio01;
 
 public class Lista {
     private Celula primeiro, ultimo;
-    // Atributo adicionado para controlar a iteração (first/next)
     private Celula atual;
 
     private class Celula {
@@ -11,10 +10,10 @@ public class Lista {
     }
 
     public Lista() {
-        this.primeiro = new Celula(); // cabeçalho
+        this.primeiro = new Celula();
         this.ultimo = this.primeiro;
         this.primeiro.prox = null;
-        this.atual = null; // Inicializa o cursor
+        this.atual = null;
     }
 
     public Lista concatena(Lista l1) {
@@ -60,30 +59,22 @@ public class Lista {
         Celula aux = this.primeiro.prox;
         System.out.print("Lista: ");
         while (aux != null) {
-            System.out.print(aux.item + " "); // Imprime na mesma linha para facilitar leitura
+            System.out.print(aux.item + " ");
             aux = aux.prox;
         }
-        System.out.println(); // Quebra de linha ao final
+        System.out.println();
     }
 
     public boolean vazia() {
         return (this.primeiro == this.ultimo);
     }
 
-    // --- MÉTODOS ADICIONADOS PARA A LETRA D ---
-
-    /**
-     * d.i: Retorna o primeiro elemento e posiciona o cursor nele.
-     */
     public Object first() {
         if (vazia()) return null;
         this.atual = this.primeiro.prox; // Aponta para o primeiro item válido
         return this.atual.item;
     }
 
-    /**
-     * d.ii: Avança o cursor e retorna o próximo elemento.
-     */
     public Object next() {
         if (this.atual == null || this.atual.prox == null) {
             return null;
@@ -92,11 +83,6 @@ public class Lista {
         return this.atual.item;
     }
 
-    // --- MÉTODO ADICIONAL PARA AUXILIAR A LETRA F ---
-
-    /**
-     * Pesquisa se um elemento existe sem retirá-lo.
-     */
     public Object pesquisa(Object chave) {
         if (vazia() || chave == null) return null;
         Celula aux = this.primeiro.prox;
