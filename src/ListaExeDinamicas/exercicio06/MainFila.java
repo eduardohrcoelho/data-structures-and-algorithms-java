@@ -19,10 +19,10 @@ public class MainFila {
         if (segundaFila != null) {
             System.out.println("Divisão realizada com sucesso!");
 
-            System.out.print("Fila 1 (Original): ");
+            System.out.print("Fila 1: ");
             filaOriginal.imprime();
 
-            System.out.print("Fila 2 (Nova):     ");
+            System.out.print("Fila 2:     ");
             segundaFila.imprime();
         } else {
             System.out.println("Chave não encontrada ou erro na divisão.");
