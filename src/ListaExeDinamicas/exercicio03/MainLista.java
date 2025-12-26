@@ -17,7 +17,7 @@ public class MainLista {
         lista.imprime();
 
         // c)
-        System.out.println("\n--- c) Chamando retira(7.7, 2) ---");
+        System.out.println("\n--- c) Chamando retira ---");
         int qtdRemovida = lista.retira(7.7, 2);
         System.out.println("Foram removidos " + qtdRemovida + " elementos.");
 
