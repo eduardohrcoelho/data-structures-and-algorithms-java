@@ -115,6 +115,18 @@ public class Lista {
         return this.primeiro.prox.item;
     }
 
+    public Object getUltimo(){
+        if(vazia()){
+            return null;
+        }
+        Celula aux = this.primeiro;
+        while(aux.prox != null){
+            aux = aux.prox;
+        }
+
+        return aux.item;
+    }
+
     public int tamanho(){
         int cont = 0;
         Celula aux = this.primeiro.prox;
@@ -133,7 +145,7 @@ public class Lista {
         l1.insere("C");
         l1.insere("D");
         list.concatena(l1);
-        Object pRetirado = list.retiraUltimo();
+        Object pRetirado = list.getUltimo();
         System.out.println("Primeiro elemento retirado: " + pRetirado);
         list.imprime();
     }
