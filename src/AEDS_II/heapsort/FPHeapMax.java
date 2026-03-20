@@ -24,4 +24,12 @@ public class FPHeapMax {
         }
         this.v[esq] = x;
     }
+
+    public void constroi(){
+        int esq = n/2 + 1;
+        while(esq > 1){
+            esq--;
+            this.refaz(esq, this.n);
+        }
+    }
 }
