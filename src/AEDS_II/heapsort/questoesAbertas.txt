@@ -1,0 +1,11 @@
+1)
+a) 
+- consultaMax() = 0(1). O maior item do conjunto está sempre na posição 1 do vetor, o acesso é instantâneo;
+- refaz() = O(log n). O algoritmo percorre apenas um caminho da raiz até a folha. Como a árvore é binária completa, sua altura é log n, limitando o número de comparações e trocas a esse valor;
+- constrói() = O(n). Embora chame o refaz repetidamente, a maior parte dos nós está nas folhas e níveis mais baixos, afundando muito pouco ou nada. A soma matemática de todo esse trabalho resulta num custo estritamente linear no tamanho do vetor;
+- retiraMax() = O(log n). A operação troca a raiz com o último elemento (O(1)) e chama o refaz para o novo elemento na raiz afunda até o seu lugar correto, que custa O(log n);
+- aumentaChave() = O(log n). No pior caso, o item recém-alterado precisa flutuar do último nível da árvore até à raiz, fazendo uma divisão por 2 a cada passo, limitando-se à altura da árvore;
+- inser() = O(log n). O item é colocado na última posição vazia (O(1)) e utiliza-se o aumentaChave() para que ele suba até a posição correta na hierarquia.
+
+4)
+b)Tanto o Heapsort quanto o Merge Sort apresentam a mesma complexidade de tempo de execução, sendo O(N log N) em todos os casos (melhor, médio e pior) . Por conta disso, nos testes práticos, os tempos de ordenação medidos são da mesma ordem de grandeza. A diferença fundamental entre eles reside no uso de memória e na estabilidade. O Heapsort é um algoritmo que ordena os dados dentro do próprio vetor, não necessitando de nenhuma memória adicional , mas possui a desvantagem de não ser um método estável. O Merge Sort, por sua vez, é um algoritmo estável, porém exige a alocação de um vetor auxiliar de tamanho O(N) durante o seu processo de intercalação. Sendo assim, o Heapsort é o mais adequado para sistemas com restrições severas de memória ou aplicações que não podem tolerar variações no tempo esperado de execução . Em contrapartida, o Merge Sort é a escolha ideal quando o sistema possui memória abundante e a preservação da ordem original de chaves repetidas (estabilidade) é um requisito obrigatório para a regra de negócio da aplicação.
