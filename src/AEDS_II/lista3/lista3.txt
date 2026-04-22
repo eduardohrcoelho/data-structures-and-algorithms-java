@@ -1,0 +1,8 @@
+1)
+a)
+Sequência pré-ordem: D-B-A-C-I-E-G-F-H
+Sequência pós-ordem: A-C-B-F-H-G-E-I-D
+Sequência em-ordem: A-B-C-D-E-F-G-H-I
+b) A altura atual da árvore é 4. Caso ela fosse completa, diminuiria para 3.
+
+2) A sequência 4 não pode ser a sequência de chaves examinadas em uma busca pela chave 5 porque ela não respeita a regra do Teto-Piso, quando a sequência chega no 8 o teto da sub-árvore a esquerda é 7, sendo assim impossibilita a busca pela chave 5 que está no final da sequência.
